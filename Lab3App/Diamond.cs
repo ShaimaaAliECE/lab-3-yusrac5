@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace Lab3App
 {
     internal class Diamond : Treasure
@@ -6,7 +8,7 @@ namespace Lab3App
         private string name;
         private int Score;
 
-        public Diaomond(string name, int score)
+        public Diamond(string name, int score)
         {
             this.name = name;
             this.Score = score;

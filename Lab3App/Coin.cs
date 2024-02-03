@@ -6,7 +6,6 @@ namespace Lab3App
     internal class Coin : Treasure
     {
         private string name;
-        private int Score;
         private int value;
 
         public Coin(string name, int score, int value)
@@ -15,10 +14,12 @@ namespace Lab3App
             this.Score = score;
             this.value = value;
         }
+
         public override void Display()
         {
             Console.WriteLine("Coin " + name + " is displayed");
         }
+
         public override void AddMe(List<Collectable> list)
         {
             Console.WriteLine(name + " Collected, Congrats!!!!");
@@ -26,16 +27,18 @@ namespace Lab3App
             UpdateTotalScore();
             UpdateTotalValue();
         }
+
         public void UpdateTotalValue()
         {
             CollectionBoard.TotalValue += value;
             Console.WriteLine("Total Value is updated to: " + CollectionBoard.TotalValue);
         }
+
         public override void UpdateTotalScore()
         {
-                CollectionBoard.TotalScore += Score;
-                Console.WriteLine("Total Score is updated to: " + CollectionBoard.TotalScore);
-            }
+            CollectionBoard.TotalScore += Score;
+            Console.WriteLine("Total Score is updated to: " + CollectionBoard.TotalScore);
         }
     }
-
+}
+    
